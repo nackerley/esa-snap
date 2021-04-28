@@ -24,13 +24,14 @@ RUN apt-get update && apt-get upgrade -y && \
     vim \
     wget \
     zip \
+	snaphu \
     && apt-get autoremove -y \
     && apt-get clean -y
 
 # Set the locale
 ENV LANG en_US.utf8
 ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.utf8
+ENV LC_ALL C
 
 # SNAP wants the current folder '.' included in LD_LIBRARY_PATH
 ENV LD_LIBRARY_PATH ".:$LD_LIBRARY_PATH"
